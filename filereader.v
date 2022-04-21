@@ -1,4 +1,4 @@
-module vfilereader
+module filereader
 import os
 import io 
 
