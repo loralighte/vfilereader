@@ -2,10 +2,8 @@ module vfilereader
 import os
 import io 
 
-pub fn read_lines(filename string) []string {
-	mut file := os.open(filename) or {
-		return [err.str()]
-	}
+pub fn read_lines(filename string) ?[]string {
+	mut file := os.open(filename) ?
 	mut data := []string{}
 	mut read := io.new_buffered_reader(reader: file)
 	for {
@@ -15,8 +13,8 @@ pub fn read_lines(filename string) []string {
 	return data
 }
 
-pub fn read(filename string) string {
-	text := read_lines(filename)
+pub fn read(filename string) ?string {
+	text := read_lines(filename) ?
 	mut data := ""
 	mut position := 0
 	for line in text {
