@@ -1,6 +1,6 @@
 Module {
-	name: "vfilereader"
-	version: "A simple file reading library"
+	name: "filereader"
+	description: "A simple file reading library"
 	version: "1.0"
 	repo_url: 'https://github.com/loralighte/vfilereader',
 	dependencies: []

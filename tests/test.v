@@ -1,4 +1,4 @@
-import vfilereader as vfr 
+import filereader as vfr 
 
 fn main(){
 	// Read by lines
